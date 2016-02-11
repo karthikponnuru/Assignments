@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.vontari.mapphotos.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="imageButton"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/person"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="getImage"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:ems="10"
+        android:id="@+id/FirstName"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        android:layout_below="@+id/image"
+        android:layout_marginStart="31dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Last Name"
+        android:ems="10"
+        android:id="@+id/LastName"
+        android:layout_below="@+id/FirstName"
+        android:layout_alignStart="@+id/Age"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Age"
+        android:hint="Age"
+        android:layout_below="@+id/LastName"
+        android:layout_alignStart="@+id/FirstName"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Email"
+        android:layout_below="@+id/Age"
+        android:layout_alignStart="@+id/Age"
+        android:hint="Email"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:hint="Password"
+        android:id="@+id/Password"
+        android:layout_below="@+id/Email"
+        android:layout_alignStart="@+id/Email" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:id="@+id/CreateAccount"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/Password"
+        android:layout_alignStart="@+id/Password"
+        android:layout_alignParentEnd="true"
+        android:onClick="createAccount"/>
+</RelativeLayout>
